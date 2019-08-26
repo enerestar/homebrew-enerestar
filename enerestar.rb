@@ -8,7 +8,7 @@ class Enerestar < Formula
   sha256 "4aacd306c68f01cadc4ea19782818eec45b86ccef4809d84da1c362fd244e5c6"
 
   def install
-    bin.install "hello"
+    bin.install "enerestar"
   end
 
   test do
