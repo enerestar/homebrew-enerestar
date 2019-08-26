@@ -7,17 +7,8 @@ class Enerestar < Formula
   url "https://github.com/enerestar/enerestar/releases/download/v1.0.5/enerestar-1.0.5.tar.gz"
   sha256 "4aacd306c68f01cadc4ea19782818eec45b86ccef4809d84da1c362fd244e5c6"
 
-  # depends_on "cmake" => :build
-
   def install
-    # ENV.deparallelize  # if your formula fails when building in parallel
-    # Remove unrecognized options if warned by configure
-    system "./configure", "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--disable-silent-rules",
-                          "--prefix=#{prefix}"
-    # system "cmake", ".", *std_cmake_args
-    system "make", "install" # if this fails, try separate make/make install steps
+    bin.install "hello"
   end
 
   test do
